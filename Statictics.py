@@ -28,7 +28,7 @@ HIGHEST_EXPECTED_VALUE = 1000
 # minimum_deviation Float[]
 # maximum_deviation Float[]
 # average_deviation Float[]
-# names_of_columns
+# names_of_columns String[]
 # !!!
 high_face_of_interval = []
 low_face_of_interval = []
