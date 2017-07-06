@@ -28,12 +28,14 @@ HIGHEST_EXPECTED_VALUE = 1000
 # minimum_deviation Float[]
 # maximum_deviation Float[]
 # average_deviation Float[]
+# names_of_columns
 # !!!
 high_face_of_interval = []
 low_face_of_interval = []
 minimum_deviation = []
 maximum_deviation = []
 average_deviation = []
+names_of_columns = []
 
 
 # !!!! Counting part !!!!
@@ -42,8 +44,9 @@ average_deviation = []
 # Main cicle for passing each of paramentr in analysis
 for k in range(0,AMOUNT_OF_ANALYSIS):
 
-    # Printing the name of analysis
-    print(pdata.columns[2*k+1][0:pdata.columns[2*k+1].find('_')])
+    # Saving and printing the name of analysis
+    names_of_columns.append(pdata.columns[2*k+1][0:pdata.columns[2*k+1].find('_')])
+    print(names_of_columns[k])
 
 
     # Renew reusable objects
@@ -174,6 +177,6 @@ asymmetric_error = [lower_error, upper_error]
 
 # Drawing by using special matplotlab type of drawing points with strange lines
 plt.errorbar(x, y, xerr=asymmetric_error, fmt='o', color='red', markersize='1', ecolor = 'blue')
-plt.yticks(y, pdata.columns[1:][0:pdata.columns[2*k+1].find('_')])
+plt.yticks(y, names_of_columns)
 # Show drawned picture
 plt.show()
