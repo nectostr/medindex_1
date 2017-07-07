@@ -86,7 +86,7 @@ for k in range(0,AMOUNT_OF_ANALYSIS):
             # !!!
             # deviation Float
             # !!!
-            deviation = first_value-second_value
+            deviation = first_value / second_value
 
             # Adding deviation value to list
             list_of_сurrent_deviation.append(deviation)
@@ -178,5 +178,6 @@ asymmetric_error = [lower_error, upper_error]
 # Drawing by using special matplotlab type of drawing points with strange lines
 plt.errorbar(x, y, xerr=asymmetric_error, fmt='o', color='red', markersize='1', ecolor = 'blue')
 plt.yticks(y, names_of_columns)
+
 # Show drawned picture
 plt.show()

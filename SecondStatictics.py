@@ -86,7 +86,7 @@ for k in range(0,AMOUNT_OF_ANALYSIS):
             # !!!
             # deviation Float
             # !!!
-            deviation = first_value-second_value
+            deviation = first_value / second_value
 
             # Adding deviation value to list
             list_of_сurrent_deviation.append(deviation)
